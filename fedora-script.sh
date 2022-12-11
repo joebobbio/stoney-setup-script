@@ -1,4 +1,6 @@
-#!bin/bash
+#!/bin/bash
+
+curUser=$(xdg-user-dir)
 
 # Make DNF actually usable
 echo -e "max_parallel_downloads=10\ndeltarpm=true" >> test.txt
@@ -35,7 +37,7 @@ flatpak update
 
 sudo dnf install -y git
 
-cd /home/jade
+cd $curUser
 
 git clone https://github.com/eupnea-linux/audio-scripts
 cd audio-scripts
