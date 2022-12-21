@@ -1,6 +1,11 @@
 #!/bin/bash
 
-curUser=$(xdg-user-dir)
+sudo su - root << EOF
+printf 'Beginning installation\n'
+EOF
+
+curUser=then 
+if $curUser = root
 
 # Make DNF actually usable
 echo -e "max_parallel_downloads=10\ndeltarpm=true" >> test.txt
@@ -37,7 +42,7 @@ flatpak update
 
 sudo dnf install -y git
 
-cd $curUser
+cd /home/$USER
 
 git clone https://github.com/eupnea-linux/audio-scripts
 cd audio-scripts
