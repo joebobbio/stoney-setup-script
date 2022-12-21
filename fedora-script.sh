@@ -4,8 +4,6 @@ sudo su - root << EOF
 printf 'Beginning installation\n'
 EOF
 
-curUser=then 
-if $curUser = root
 
 # Make DNF actually usable
 echo -e "max_parallel_downloads=10\ndeltarpm=true" >> test.txt
