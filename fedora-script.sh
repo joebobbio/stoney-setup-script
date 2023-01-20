@@ -19,6 +19,6 @@ sudo systemctl mask power-profiles-daemon;
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo; flatpak update
 
 git clone https://github.com/eupnea-linux/audio-scripts
-cd audio-scripts;chmod+x setup-audio;./setup-audio
+cd audio-scripts;chmod +x setup-audio;./setup-audio
 EOF
 printf 'Installation finished, please reboot your system\n'
