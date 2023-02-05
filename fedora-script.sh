@@ -5,7 +5,7 @@ printf 'This script needs to be run as superuser (root on most unix systems)\n'
 cd ~/Desktop/
 
 sudo su - root << EOF
-echo "max_parallel_downloads=10\ndeltarpm=true" >> /etc/dnf/dnf.conf
+echo 'max_parallel_downloads=10\ndeltarpm=true' >> /etc/dnf/dnf.conf
 
 dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm;
 
