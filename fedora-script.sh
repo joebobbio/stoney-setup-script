@@ -11,8 +11,8 @@ dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-
 
 dnf update --refresh -y;
 
-dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin sound-and-video;
-dnf group upgrade --with-optional Multimedia;
+dnf groupupdate -y multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin sound-and-video;
+dnf group upgrade -y --with-optional Multimedia;
 dnf install -y tlp tlp-rdw lame\* --exclude=lame-devel intel-media-driver ffmpeg-libs libva libva-utils git;
 sudo systemctl mask power-profiles-daemon;
 
